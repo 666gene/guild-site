@@ -5,7 +5,7 @@ services:
     image: mongo:latest
     container_name: guild-site-mongodb
     ports:
-      - "27017:27017"
+      - "27018:27017"
     volumes:
       - mongodb_data:/data/db
     environment:
@@ -34,7 +34,7 @@ services:
       dockerfile: Dockerfile
     container_name: guild-site-backend
     ports:
-      - "3001:3001"
+      - "3003:3001"
     environment:
       - NODE_ENV=production
     depends_on:
